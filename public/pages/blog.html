@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Dhuwark Designs: Blog</title>
+</head>
+<style>
+    :root {font-size: 17px;}
+:root{
+  --primary-color: hsl(91 54% 43%);
+  --secondary-color: #007EFF;
+  --background-color: #F2F2F2;
+  --background-secondary-color: white;
+  --text-color: black;
+}
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.border {border: 2px solid red;}
+
+.mobile {display: none;}
+
+.desktop {display: flex;}
+
+.desktop-hide {display: none;}
+
+p {font-size: 1rem;}
+
+h1 {font-size: 3.0rem;}
+
+h2 {font-size: 2.2rem; }
+
+h3 {font-size: 1.7rem}
+
+h4 {font-size: 1.5rem; font-weight: 600;}
+
+h5 {font-size: 1.3rem; font-weight: 600;}
+
+h6 {font-size: 1rem; font-weight: 600;}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--background-color);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.active {
+  color: var(--primary-color);
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+section {
+  width: 100%;
+}
+
+.underline {
+  width: 50px;
+  height: 5px;
+  background-color: var(--secondary-color);
+}
+
+/* Header Section */
+
+header {
+  width: 100%;
+  position: fixed;
+  background-color: #F2F2F2;
+  z-index: 99;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+#desktop-nav ul li {
+  margin: 0 20px;
+}
+
+#desktop-nav ul li:last-child {
+  margin-right: 40px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: var(--primary-color);
+}
+
+.menu-page {
+  background-color: var(--background-secondary-color);
+  position: fixed;
+  width: 300px;
+  left: -300px;
+  height: 40%;
+  transition: all 0.5s;
+  border-bottom-right-radius: 20px;
+}
+
+.menu-active {
+  left: 0;
+  transition: all 0.5s;
+}
+
+.menu-page nav ul li {
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+
+.menu-page .height-zero {
+  height: 0;
+  background-color: var(--background-color);
+  transition: all 0.5s;
+}
+
+.call-to-action-btn {
+  color: var(--primary-color);
+  border-radius: 12.5px;
+  font-weight: bold;
+  font-size: 1rem;
+  border: 2px solid var(--primary-color);
+  transition: all 0.5s;
+}
+
+.call-to-action-btn:hover {
+  background-color: var(--primary-color);
+  color: white;
+  border: 2px solid var(--primary-color);
+}
+
+  /* Hero Section */
+
+.hero-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: var(--background-color);
+}
+
+.hero-text h1 {
+  text-align: center;
+  line-height: 1.25;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+#hero-first-line:hover {
+  color: var(--secondary-color);
+  transition: all 0.5s;
+}
+
+#hero-second-line:hover {
+  color: var(--secondary-color);
+  transition: all 0.5s;
+}
+
+.hero-services {
+  color: var(--primary-color);
+}
+
+.hero-services span {
+  font-size: xx-large;
+  font-weight: 600;
+}
+
+.hero-image {
+  width: 100%;
+}
+
+.hero-image-mobile {
+  width: 60%;
+}
+
+.hero-action a {
+  color: var(--background-secondary-color);
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: var(--primary-color);
+  border-radius: 15px;
+  border: 2px solid var(--primary-color);
+  transition: all 0.5s;
+}
+
+.hero-action a:hover {
+  background-color: var(--background-secondary-color);
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  transition: all 0.5s;
+}
+
+.service-signs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-signs i {
+  font-size: 1.75rem;
+  color: var(--secondary-color);
+}
+
+/* Banner image section */
+
+.banner-img-container {
+  width: 100%;
+  aspect-ratio: 3 / 1;
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+  padding: 0;
+}
+
+.banner-img {
+  background-image: url("img/hero/post-hero-image.jpg");
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  margin: 0;
+}
+
+.banner-img-container .banner-img {
+  transform: scale(1.0);
+  transition: all 0.5s;
+}
+
+.banner-img-container:hover .banner-img {
+  transform: scale(1.2);
+}
+
+/* Why us section */  
+
+.why-content {
+  border-radius: 20px;
+}
+
+.why-content .card-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.why-content .card-header i {
+  font-size: 3rem;
+  color: var(--primary-color);
+  transition: all 0.5s;
+}
+
+.why-content:hover .card-header i {
+  color: var(--secondary-color);
+}
+
+/* Services section */
+
+.quote i{
+  color: var(--primary-color);
+  transition: all 0.5s;
+}
+
+.quote:hover i {
+  color: var(--secondary-color);
+  transition: all 0.5s;
+}
+
+#services-section img {
+  border-radius: 15px;
+}
+
+.services-symbol {
+  width: 90%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-secondary-color);
+}
+
+.services-symbol i {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  transition: all 0.5s;
+}
+
+.services-symbol:hover i {
+  color: var(--secondary-color);
+}
+
+.services-symbol p {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+  color: var(--primary-color);
+}
+
+.service-img-container {
+  overflow: hidden;
+  padding: 0;
+  border-radius: 15px;
+}
+
+.service-img-container .service-img {
+  transform: scale(1.0);
+  transition: all 0.5s;
+}
+
+.service-img-container:hover .service-img {
+  transform: scale(1.2);
+}
+
+/* Previous Projects */
+
+.project-image-container {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.project-image-container .project-image {
+  transform: scale(1.0);
+  transition: all 0.5s;
+}
+
+.project-image-container:hover .project-image {
+  transform: scale(1.2);
+}
+
+.project-des h3 {
+  text-align: center;
+}
+
+.project img {
+  border-radius: 15px;
+  aspect-ratio: 3 / 2;
+}
+
+.project-features {
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-features .wrap-content {
+  display: flex;
+  align-items: center;
+  border: 1px solid #737373;
+  background-color: var(--background-secondary-color);
+  border-radius: 10px;
+}
+
+.project-des p {
+  text-align: center;
+  margin-top: 30px;
+  
+}
+
+.des p {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #737373;
+}
+
+.feature-symbol {
+  font-size: 1.7rem;
+  border-right: 2px solid #737373;
+}
+
+.project-des .feature-symbol {
+  color: var(--primary-color);
+  transition: all 0.5s;
+}
+
+.project-des:hover .feature-symbol {
+  color: var(--secondary-color);
+}
+
+/* Testimonials */
+
+#testimonial {
+  border-radius: 0px;
+}
+
+.testimonial-card {
+  border-radius: 20px;
+}
+
+ .testimonial-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ .testimonial-card-body .profile-img {
+  width: 40%;
+  border-radius: 50%;
+  border: 5px solid var(--secondary-color);
+}
+
+ .testimonial-card-body h4 {
+  margin-top: 20px;
+}
+
+ .testimonial-card-body h6 {
+  font-style: italic;
+  color: #737373;
+}
+
+ .testimonial-card-body p {
+  margin-top: 5px;
+  text-align: center;
+}
+
+ .testimonial-card-body i {
+  font-size: 2rem;
+  color: #737373;
+}
+
+ .testimonial-card-body .rating-img {
+  width: 30%;
+  margin: 10px;
+}
+
+#trusted-brands {
+  background-color: var(--primary-color);
+}
+
+#trusted-brands h2 {
+  color: white;
+}
+
+#trusted-brands .card {
+  width: 80%;
+  flex-wrap: wrap;
+  border-radius: 20px;
+}
+
+#trusted-brands img {
+  width: 150px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.wrap-logo {
+  display: flex;
+  align-items: center;
+}
+
+/* House plans */
+
+.product {
+  width: 100%;
+  border-radius: 15px;
+}
+
+#image-1-1 {
+  background-image: url("img/shop/image-1-1.jpeg");
+}
+
+#image-1-2 {
+  background-image: url("img/shop/image-1-2.jpg");
+}
+
+#image-1-3 {
+  background-image: url("img/shop/image-1-3.jpg");
+}
+
+#image-2-1 {
+  background-image: url("img/shop/image-2-1.jpeg");
+}
+
+.product-image {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+}
+
+.product .product-image button {
+  display: none;
+  transition: all 0.5s;
+}
+
+.product:hover .product-image button {
+  display: flex;
+  transition: all 0.5s;
+}
+
+.product-image button {
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: 3px solid var(--primary-color);
+  color: var(--primary-color);
+  border-radius: 15px;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.product-image button:hover{
+  background-color: var(--secondary-color);
+  border: 3px solid var(--secondary-color);
+}
+
+.product-btn {
+  border-radius: 15px;
+  font-weight: 600;
+  color: var(--primary-color);
+  border: none;
+  font-size: 1.1rem;
+  transition: all 0.5s;
+}
+
+.product-btn:hover {
+  background-color: var(--primary-color);
+}
+
+/* Custom design */
+
+#custom-design {
+  background-color: var(--background-secondary-color);
+  overflow: hidden;
+}
+
+#phone {
+  color: var(--primary-color);
+}
+
+.custom-img {
+  transition: all 0.5s;
+}
+
+.custom-img:hover {
+  transform: scale(1.2);
+  transition: all 0.5s;
+}
+
+.custom-design-btn {
+  background-color: var(--primary-color);
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 1rem;
+  border: 2px solid var(--primary-color);
+  transition: all 0.5s;
+}
+
+.custom-design-btn:hover {
+  background-color: var(--background-secondary-color);
+  color: var(--primary-color);
+}
+
+/* Staff section */
+
+#staff {
+  width: 100%;
+}
+
+.staff-card {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.staff-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 15px;
+}
+
+.staff-card i {
+  margin-top: -25px;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  padding: 0.5rem;
+  background-color: var(--background-secondary-color);
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  z-index: 1;
+  transition: all 0.5s;
+}
+
+.staff-card:hover i {
+  color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+  transition: all 0.5s;
+}
+
+.staff-card h5 {
+  font-weight: 500;
+  transition: all 0.5s;
+}
+
+.staff-card p {
+  color: #737373;
+  font-weight: 500;
+  margin: 0;
+  font-size: 0.9rem;
+  transition: all 0.5s;
+}
+
+.staff-card:hover h5, .staff-card:hover p {
+  font-weight: 600 ;
+  transition: all 0.5s;
+}
+
+.staff-card img {
+  transition: all 0.5s;
+}
+
+.staff-card:hover img {
+  transform: scale(1.2);
+  transition: all 0.5s;
+}
+
+.staff-btn {
+  border-radius: 15px;
+  font-weight: 600;
+  color: var(--primary-color);
+  border: none;
+  font-size: 1.1rem;
+  transition: all 0.5s;
+}
+
+.staff-btn:hover {
+  background-color: var(--primary-color);
+}
+
+/* Blog section */
+
+.blog-card {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.blog-link .blog-img  {
+  transition: all 0.5s;
+}
+
+.blog-link:hover .blog-img  {
+  transform: scale(1.2);
+  transition: all 0.5s;
+}
+
+.blog-card img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  border-radius: 20px;
+  transition: all 0.5s;
+}
+
+.blog-card h5 {
+  text-transform: capitalize;
+}
+
+.blog-card p {
+  font-size: 0.9rem;
+  color: #737373;
+}
+
+.blog-card .read-more {
+  font-size: 0.9rem;
+  color: var(--primary-color);
+}
+
+.blog-card span {
+  font-size: 0.9rem;
+  color: #737373;
+}
+
+.blog-btn {
+  border-radius: 15px;
+  font-weight: 600;
+  color: var(--primary-color);
+  border: none;
+  font-size: 1.1rem;
+  transition: all 0.5s;
+}
+
+.blog-btn:hover {
+  background-color: var(--primary-color);
+}
+
+/* Footer section */
+
+footer {
+  width: 100%;
+  background-color: #313131;
+}
+
+.footer-contacts {
+  color: white;
+}
+
+.map img {
+  border-radius: 20px;
+}
+
+#facebook {
+  background-image: url("img/footer/facebook_new.PNG");
+}
+
+#instagram {
+  background-image: url("img/footer/instagram_icon.PNG");
+}
+
+#linkedin {
+  background-image: url("img/footer/linkedin_icon.PNG");
+}
+
+#youtube {
+  background-image: url("img/footer/youtube_icon.PNG");
+}
+
+.social-media {
+  color: white;
+}
+
+.social-icons div {
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+}
+
+.mobile-social {
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+}
+
+.quick-links {
+  color: white;
+}
+
+.quick-links a{
+  color: white;
+  text-decoration: none;
+}
+
+.rights span {
+  color: white;
+}
+
+/* Screen sizes lessa than 576 px */
+
+@media only screen and (max-width: 575px) {
+
+  /* Hero content */
+
+  h1 {
+    font-size: 2.3rem;
+  }
+
+  .hero-image {
+    width: 90%;
+  }
+
+  .hero-content {
+    height: 100vh;
+    justify-content: space-around;
+  }
+
+  /* Banner section */
+
+  .banner-img-container {
+    height: 350px;
+  }
+
+  /* Footer section */
+
+  .footer-contacts {
+    text-align: center;
+  }
+
+  .social-media {
+    text-align: center;
+  }
+
+  .quick-links {
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+}
+    section {
+    margin-top: 85px;
+}
+
+.header-box {
+    background-image: url("img/blog/eco-friendly-living.jpg");
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#blog-header {
+    margin-top: 150px;
+}
+
+#blog-header {
+    background-image: url("img/blog/blog-header.jpg");
+}
+
+.header-box {
+    height: 200px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header-box h2 {
+    color: white;
+}
+
+.blog-img {
+    border-radius: 15px;
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.carousel-caption h3 {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+}
+
+.screen {
+    background-color: black;
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    opacity: 0.4;
+    border-radius: 15px;
+}
+
+#slide-blog-1 {
+    background-image: url("img/blog/10_benifits_of_making_3d_designs.jpeg");
+    
+}
+
+#slide-blog-2 {
+    background-image: url("img/blog/15_new_design_ideas.png");
+}
+
+#slide-blog-3 {
+    background-image: url("img/blog/13_ideas_to_reduce_the_cost.jpg");
+}
+
+.paging {
+    width: 30px;
+    aspect-ratio: 1 / 1;
+    border: none;
+    color: var(--primary-color);
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 1.2rem;
+}
+
+#page-1 {
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    color: white;
+}
+
+#page-2 {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+#page-3 {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.paging-arrow {
+    border: none;
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+</style>
+<body>
+
+    <!--header-section-->
+    <header class="header-section">
+        <div class="container">
+
+            <div class="row d-flex flex-row py-3">
+                <div class="col-2">
+                    <a href="/"><img src="img/header/aanda_design_logo.png" alt="A & A design logo"  height="50px"></a>
+                </div>
+
+                <!-- Menu section for desktops -->
+
+                <div class="col-10 justify-content-end align-items-center d-none d-lg-flex">  
+                    <nav id="desktop-nav" class="d-flex align-items-center">
+                        <ul class="d-flex m-0">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="pages/shop.html">Shop</a></li>
+                            <li><a  href="{{route('shop')}}">Blog</a></li>
+                            <li><a href="pages/about.html">About</a></li>
+                        </ul>
+                    </nav>
+                    <div class="call-to-action">
+                        <a class="call-to-action-btn btn btn-outline-primary px-3 py-1" href="pages/contact.html">Contact Us</a>
+                    </div> 
+                </div>
+
+                <!-- Hamburg for mobile menu -->
+
+                <div class="col-8 d-block d-lg-none"></div>
+
+                <div class="hamburg col-2 d-flex d-lg-none align-items-center justify-content-center">
+                    <i class="fa-solid fa-bars fs-3"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu section for mobiles-->
+
+        <div class="menu-page pb-4 d-flex flex-column justify-content-center align-items-center border">
+            <nav class="">
+                <ul class="d-flex flex-column justify-content-center align-items-center p-0">
+                    <li><a class="" href="/">Home</a></li>
+                    <li><a class="" href="pages/shop.html">Shop</a></li>
+                    <li><a href="{{route('blog')}}">Blog</a></li>
+                    <li><a class="" href="pages/about.html">About</a></li>
+                </ul>
+            </nav>
+            <div class="call-to-action">
+                <a class="call-to-action-btn btn btn-outline-primary px-3 py-1" href="pages/contact.html">Contact Us</a>
+            </div> 
+        </div>
+  
+    </header><!--header-section-->
+
+    <section>
+
+        <div class="row d-flex d-md-none">
+            <div class="header-box d-flex justify-content-center align-items-center">
+                <h2 class="text-bold">Blog</h2>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <!-- Feature blogs -->
+
+            <div id="carouselExampleCaptions" class="carousel slide d-none d-md-flex" data-bs-ride="true">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+
+                    <!-- First blog image -->
+
+                    <div class="carousel-item active">
+                        <div id="slide-blog-1" class="blog-img">
+                            <div class="screen"></div>
+                        </div>
+                        
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>10 benifits of making 3D designs before construction</h3>
+                            <p>In the realm of architectural design, the utilization of 3D technology has revolutionized the way projects are visualized and executed. <a class="read-more" href="pages/blog.posts/blog.post.1/blog.post.1.html">Read more..</a></p>
+                        </div>
+                    </div>
+
+                    <!-- Second blog image -->
+
+                    <div class="carousel-item">
+                        <div id="slide-blog-2" class="blog-img">
+                            <div class="screen"></div>
+                        </div>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>15 new design ideas for 2 story houses</h3>
+                            <p>Two-story houses provide ample space for families, allowing for functional separation between living and private areas. Whether you're <a class="read-more" href="pages/blog.posts/blog.post.1/blog.post.1.html">Read more..</a></p>
+                        </div>
+                    </div>
+
+                    <!-- Third blog image-->
+
+                    <div class="carousel-item">
+                        <div id="slide-blog-3" class="blog-img">
+                            <div class="screen"></div>
+                        </div>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>13 ideas to reduce the cost of house construction</h3>
+                            <p>Building a house is a significant financial undertaking, and finding ways to reduce construction costs can make a substantial differ <a class="read-more" href="pages/blog.posts/blog.post.1/blog.post.1.html">Read more..</a></p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <div class="row blog-row">
+
+                <!-- First blog post -->
+
+                <div class="d-none d-lg-flex col-4 mt-5">
+                    <a href="pages/blog.posts/blog.post.1/blog.post.1.html">
+                        <div class="blog-card">
+                            <img src="img/blog/10_benifits_of_making_3d_designs.jpeg" alt="">
+                            <h5 class="mt-3 px-1">10 benifits of making 3D designs before construction</h5>
+                            <p class="mt-3 px-1">In the realm of architectural design, the utilization of 3D technology has revolutionized the way projects are visualized and executed. <Read class="read-more" href="pages/blog.posts/blog.post.1/blog.post.1.html">Read more..</a></p>
+                            <span class="mb-3 px-1"><i class="fa-regular fa-calendar"></i> 15th March 2023</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Second blog post -->
+
+                <div class="d-none d-lg-flex col-4 mt-5">
+                    <a href="pages/blog.posts/blog.post.1/blog.post.1.html">
+                        <div class="blog-card">
+                            <img src="img/blog/15_new_design_ideas.png" alt="">
+                            <h5 class="mt-3 px-1">15 new design ideas for 2 story houses</h5>
+                            <p class="mt-3 px-1">Two-story houses provide ample space for families, allowing for functional separation between living and private areas. Whether you're <a class="read-more" href="pages/blog.posts/blog.post.1/blog.post.1.html">Read more..</a></p>
+                            <span class="mb-3 px-1"><i class="fa-regular fa-calendar"></i> 08th February 2023</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Third blog post -->
+
+                <div class="d-none d-lg-flex col-4 mt-5">
+                    <a href="#">
+                        <div class="blog-card">
+                            <img src="img/blog/13_ideas_to_reduce_the_cost.jpg" alt="">
+                            <h5 class="mt-3 px-1">13 ideas to reduce the cost of house construction</h5>
+                            <p class="mt-3 px-1">Building a house is a significant financial undertaking, and finding ways to reduce construction costs can make a substantial differ <a class="read-more" href="pages/blog.posts/blog.post.1/blog.post.1.html">Read more..</a></p>
+                            <span class="mb-3 px-1"><i class="fa-regular fa-calendar"></i> 01st January 2023</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row blog-row">
+
+                <!-- Fourth blog post -->
+
+                <div class="d-none d-lg-flex col-4 mt-5">
+                    <a href="#">
+                        <div class="blog-card">
+                            <img src="img/blog/efficient-space-planning.jpg" alt="">
+                            <h5 class="mt-3 px-1">Efficient Space Planning: Maximize Home Functionality</h5>
+                            <p class="mt-3 px-1">Efficient space planning is a fundamental aspect of creating a well-designed home that meets the needs and preferences of its occupa <a class="read-more" href="pages/blog.posts/blog.post.1/blog.post.1.html">Read more..</a></p>
+                            <span class="mb-3 px-1"><i class="fa-regular fa-calendar"></i> 15th March 2023</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Fifth blog post -->
+
+                <div class="d-none d-lg-flex col-4 mt-5">
+                    <a href="#">
+                        <div class="blog-card">
+                            <img src="img/blog/eco-friendly-living.jpg" alt="">
+                            <h5 class="mt-3 px-1">Sustainable Living: Eco-Friendly Building Materials</h5>
+                            <p class="mt-3 px-1">As environmental consciousness grows, more homeowners and builders are seeking eco-friendly alternatives to traditional construction <a class="read-more" href="pages/blog.posts/blog.post.1/blog.post.1.html">Read more..</a></p>
+                            <span class="mb-3 px-1"><i class="fa-regular fa-calendar"></i> 08th February 2023</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Sixth blog post -->
+
+                <div class="d-none d-lg-flex col-4 mt-5">
+                    <a href="#">
+                        <div class="blog-card">
+                            <img src="img/blog/power-of-classic-design.jpg" alt="">
+                            <h5 class="mt-3 px-1">Timeless Interiors: Power of Classic Design</h5>
+                            <p class="mt-3 px-1">In the ever-evolving world of interior design, trends come and go, but timeless interiors endure the test of time. Classic design <a class="read-more" href="pages/blog.posts/blog.post.1/blog.post.1.html">Read more..</a></p>
+                            <span class="mb-3 px-1"><i class="fa-regular fa-calendar"></i> 01st January 2023</span>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+
+
+
+            <!-- For mid screens -->
+
+            <div class="row blog-row">
+
+                <div class="col-12 col-md-6 d-flex d-lg-none mt-5">
+                    <a href="#">
+                        <div class="blog-card">
+                            <img src="img/blog/10_benifits_of_making_3d_designs.jpeg" alt="">
+                            <h5 class="mt-3 px-1">10 benifits of making 3D designs before construction</h5>
+                            <p class="mt-3 px-1">In the realm of architectural design, the utilization of 3D technology has revolutionized the way projects are visualized and executed. <a class="read-more" href="pages/blog.posts/blog.post.1/blog.post.1.html">Read more..</a></p>
+                            <span class="mb-3 px-1"><i class="fa-regular fa-calendar"></i> 15th March 2023</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-6 d-flex d-lg-none mt-5">
+                    <a href="#">
+                        <div class="blog-card">
+                            <img src="img/blog/15_new_design_ideas.png" alt="">
+                            <h5 class="mt-3 px-1">15 new design ideas for 2 story houses</h5>
+                            <p class="mt-3 px-1">Two-story houses provide ample space for families, allowing for functional separation between living and private areas. Whether you're <a class="read-more" href="pages/blog.posts/blog.post.1/blog.post.1.html">Read more..</a></p>
+                            <span class="mb-3 px-1"><i class="fa-regular fa-calendar"></i> 08th February 2023</span>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="row blog-row">
+
+                <div class="col-12 col-md-6 d-flex d-lg-none mt-5">
+                    <a href="#">
+                        <div class="blog-card">
+                            <img src="img/blog/13_ideas_to_reduce_the_cost.jpg" alt="">
+                            <h5 class="mt-3 px-1">13 ideas to reduce the cost of house construction</h5>
+                            <p class="mt-3 px-1">Building a house is a significant financial undertaking, and finding ways to reduce construction costs can make a substantial differ <a class="read-more" href="pages/blog.posts/blog.post.1/blog.post.1.html">Read more..</a></p>
+                            <span class="mb-3 px-1"><i class="fa-regular fa-calendar"></i> 01st January 2023</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-6 d-flex d-lg-none mt-5">
+                    <a href="#">
+                        <div class="blog-card">
+                            <img src="img/blog/efficient-space-planning.jpg" alt="">
+                            <h5 class="mt-3 px-1">Efficient Space Planning: Maximize Home Functionality</h5>
+                            <p class="mt-3 px-1">Efficient space planning is a fundamental aspect of creating a well-designed home that meets the needs and preferences of its occupa <a class="read-more" href="pages/blog.posts/blog.post.1/blog.post.1.html">Read more..</a></p>
+                            <span class="mb-3 px-1"><i class="fa-regular fa-calendar"></i> 15th March 2023</span>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="row blog-row">
+
+                <div class="col-12 col-md-6 d-flex d-lg-none mt-5">
+                    <a href="#">
+                        <div class="blog-card">
+                            <img src="img/blog/eco-friendly-living.jpg" alt="">
+                            <h5 class="mt-3 px-1">Sustainable Living: Eco-Friendly Building Materials</h5>
+                            <p class="mt-3 px-1">As environmental consciousness grows, more homeowners and builders are seeking eco-friendly alternatives to traditional construction <a class="read-more" href="pages/blog.posts/blog.post.1/blog.post.1.html">Read more..</a></p>
+                            <span class="mb-3 px-1"><i class="fa-regular fa-calendar"></i> 08th February 2023</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-6 d-flex d-lg-none mt-5">
+                    <a href="#">
+                        <div class="blog-card">
+                            <img src="img/blog/power-of-classic-design.jpg" alt="">
+                            <h5 class="mt-3 px-1">Timeless Interiors: Power of Classic Design</h5>
+                            <p class="mt-3 px-1">In the ever-evolving world of interior design, trends come and go, but timeless interiors endure the test of time. Classic design <a class="read-more" href="pages/blog.posts/blog.post.1/blog.post.1.html">Read more..</a></p>
+                            <span class="mb-3 px-1"><i class="fa-regular fa-calendar"></i> 01st January 2023</span>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Pagination -->
+
+            <div class="row d-flex justify-content-center mt-5 mb-3">
+                <div class="paging d-flex justify-content-center">
+                    <button class="paging-arrow"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button id="page-1" class="paging">1</button>
+                    <button id="page-2" class="paging">2</button>
+                    <button id="page-3" class="paging">3</button>
+                    <button class="paging-arrow"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+                
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer-Section -->
+    <footer>
+
+        <!-- Left corner column-->
+
+        <div class="container mt-5">
+            <div class="row">
+
+                <!-- Quick Contacts-->
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="footer-contacts mb-3">
+                        <h3>Quick Contacts</h3>
+                        <h4 class="mt-3">Phone</h4>
+                        <span>(+94) 112 122 324<br></span>
+                        <span>(+94) 777 658 742 (Whatsapp)</span>
+                        <h4 class="mt-3">Address</h4>
+                        <span>No. 21,<br>Galle Road,<br>Colombo 03.</span>
+                        <h4 class="mt-3">E-mail</h4>
+                        <span>contact@aandadesigns.lk</span>
+                    </div>
+                    
+                </div>
+
+                <!-- Google map of the address-->
+
+                <div class="col-4 d-none d-lg-block">
+                    <div class="map mt-2">
+                        <img class="img-fluid" src="img/footer/location_embed_map.PNG" alt="location map">
+                    </div>
+                    
+                </div>
+
+                <!-- Right column -->
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="right-col ms-xl-5 ps-xl-5">
+
+                        <!-- Social media section -->
+
+                        <div class="social-media">
+                            <div class="row">
+                                <h3>Social Media</h3>
+                            </div>
+
+                            <!-- Social icons for all screens other than extra small-->
+
+                            <div class="row d-flex d-sm-flex mt-3">
+                                <div class="social-icons d-flex">
+                                    <a class="me-3" href="#"><div id="facebook"></div></a>
+                                    <a class="me-3" href="#"><div id="instagram"></div></a>
+                                    <a class="me-3" href="#"><div id="linkedin"></div></a>
+                                    <a class="me-3" href="#"><div id="youtube"></div></a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Quick links -->
+
+                        <div class="quick-links mt-4">
+                            <div class="row">  
+                                <h3>Quick Links</h3>
+                            </div>
+
+                            <div class="row mt-1">
+                                <a class="mt-1" href="pages/policy/privacy.policy/privacy.policy.html" target=”_blank”>Privacy Policy</a>
+                                <a class="mt-1" href="pages/policy/disclaimer/disclaimer.html" target=”_blank”>Disclaimer</a>
+                                <a class="mt-1" href="pages/policy/terms/terms.conditions.html" target=”_blank”>Terms and Conditions</a>
+                                <a class="mt-1" href="pages/about.html" target=”_blank”>About Us</a>
+                                <a class="mt-1" href="pages/contact.html" target=”_blank”>Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Google maps location of the address for smaller screens-->
+
+            <div class="row md-map d-lg-none mt-4">
+                <div class="map d-flex justify-content-center mt-2">
+                    <img class="img-fluid" src="img/footer/location_embed_map.PNG" alt="location map">
+                </div>
+            </div>
+
+            <!-- Copyright notice -->
+
+            <div class="row">
+                <div class="rights d-flex justify-content-center my-3">
+                    <span>Ⓒ A&A Designs Pvt Ltd. All Rights Reserved</span>
+                </div>   
+            </div>
+        </div>
+    </footer> <!-- Footer-Section -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/569015700f.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

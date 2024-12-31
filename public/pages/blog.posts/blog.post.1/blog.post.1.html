@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>10 benifits of making 3D designs before construction</title>
+</head>
+<style>
+  h2 {
+    text-transform: capitalize;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+h4 {
+    font-weight: normal;
+    font-size: 1.4rem;
+}
+
+#blog-post {
+    margin-top: 95px;
+}
+
+.main-post .card {
+    border-radius: 15px;
+}
+
+.main-post img {
+    border-radius: 15px;
+}
+
+/* Popular posts */
+
+.popular-posts .card {
+    margin-top: 10px;
+    border-radius: 15px;
+}
+
+.popular-posts .card-body {
+    display: flex;
+}
+
+.popular-posts img {
+    padding-right: 10px;
+}
+
+/* Comments */
+
+.btn-submit {
+    color: white;
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 15px;
+    font-weight: 600;
+}
+
+.btn-submit:hover {
+    color: var(--primary-color);
+    background-color: white;
+    border-color: var(--primary-color);
+}
+
+.comments img {
+    width: 50px;
+    aspect-ratio: 1 / 1;
+    border-radius: 15px;
+}
+
+.reaction-bar {
+    width: 30%;
+}
+
+.description span {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+}
+
+.share-icons button {
+    border: none;
+    background-color: white;
+}
+
+:root {font-size: 17px;}
+:root{
+  --primary-color: hsl(91 54% 43%);
+  --secondary-color: #007EFF;
+  --background-color: #F2F2F2;
+  --background-secondary-color: white;
+  --text-color: hsl(226 34% 24%);
+}
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.border {border: 2px solid red;}
+
+.mobile {display: none;}
+
+.desktop {display: flex;}
+
+.desktop-hide {display: none;}
+
+p {font-size: 1rem;}
+
+h1 {font-size: 3.0rem;}
+
+h2 {font-size: 2.2rem; }
+
+h3 {font-size: 1.7rem}
+
+h4 {font-size: 1.5rem; font-weight: 600;}
+
+h5 {font-size: 1.3rem; font-weight: 600;}
+
+h6 {font-size: 1rem; font-weight: 600;}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--background-color);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.active {
+  color: var(--primary-color);
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+section {
+  width: 100%;
+}
+
+.underline {
+  width: 50px;
+  height: 5px;
+  background-color: var(--secondary-color);
+}
+
+/* Header Section */
+
+header {
+  width: 100%;
+  position: fixed;
+  background-color: #F2F2F2;
+  z-index: 99;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+#desktop-nav ul li {
+  margin: 0 20px;
+}
+
+#desktop-nav ul li:last-child {
+  margin-right: 40px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: var(--primary-color);
+}
+
+.menu-page {
+  background-color: var(--background-secondary-color);
+  position: fixed;
+  width: 300px;
+  left: -300px;
+  height: 40%;
+  transition: all 0.5s;
+  border-bottom-right-radius: 20px;
+}
+
+.menu-active {
+  left: 0;
+  transition: all 0.5s;
+}
+
+.menu-page nav ul li {
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+
+.menu-page .height-zero {
+  height: 0;
+  background-color: var(--background-color);
+  transition: all 0.5s;
+}
+
+.call-to-action-btn {
+  color: var(--primary-color);
+  border-radius: 12.5px;
+  font-weight: bold;
+  font-size: 1rem;
+  border: 2px solid var(--primary-color);
+  transition: all 0.5s;
+}
+
+.call-to-action-btn:hover {
+  background-color: var(--primary-color);
+  color: white;
+  border: 2px solid var(--primary-color);
+}
+
+  /* Hero Section */
+
+.hero-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: var(--background-color);
+}
+
+.hero-text h1 {
+  text-align: center;
+  line-height: 1.25;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+#hero-first-line:hover {
+  color: var(--secondary-color);
+  transition: all 0.5s;
+}
+
+#hero-second-line:hover {
+  color: var(--secondary-color);
+  transition: all 0.5s;
+}
+
+.hero-services {
+  color: var(--primary-color);
+}
+
+.hero-services span {
+  font-size: xx-large;
+  font-weight: 600;
+}
+
+.hero-image {
+  width: 100%;
+}
+
+.hero-image-mobile {
+  width: 60%;
+}
+
+.hero-action a {
+  color: var(--background-secondary-color);
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: var(--primary-color);
+  border-radius: 15px;
+  border: 2px solid var(--primary-color);
+  transition: all 0.5s;
+}
+
+.hero-action a:hover {
+  background-color: var(--background-secondary-color);
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  transition: all 0.5s;
+}
+
+.service-signs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-signs i {
+  font-size: 1.75rem;
+  color: var(--secondary-color);
+}
+
+/* Banner image section */
+
+.banner-img-container {
+  width: 100%;
+  aspect-ratio: 3 / 1;
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+  padding: 0;
+}
+
+.banner-img {
+  background-image: url("img/hero/post-hero-image.jpg");
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  margin: 0;
+}
+
+.banner-img-container .banner-img {
+  transform: scale(1.0);
+  transition: all 0.5s;
+}
+
+.banner-img-container:hover .banner-img {
+  transform: scale(1.2);
+}
+
+/* Why us section */  
+
+.why-content {
+  border-radius: 20px;
+}
+
+.why-content .card-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.why-content .card-header i {
+  font-size: 3rem;
+  color: var(--primary-color);
+  transition: all 0.5s;
+}
+
+.why-content:hover .card-header i {
+  color: var(--secondary-color);
+}
+
+/* Services section */
+
+.quote i{
+  color: var(--primary-color);
+  transition: all 0.5s;
+}
+
+.quote:hover i {
+  color: var(--secondary-color);
+  transition: all 0.5s;
+}
+
+#services-section img {
+  border-radius: 15px;
+}
+
+.services-symbol {
+  width: 90%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-secondary-color);
+}
+
+.services-symbol i {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  transition: all 0.5s;
+}
+
+.services-symbol:hover i {
+  color: var(--secondary-color);
+}
+
+.services-symbol p {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+  color: var(--primary-color);
+}
+
+.service-img-container {
+  overflow: hidden;
+  padding: 0;
+  border-radius: 15px;
+}
+
+.service-img-container .service-img {
+  transform: scale(1.0);
+  transition: all 0.5s;
+}
+
+.service-img-container:hover .service-img {
+  transform: scale(1.2);
+}
+
+/* Previous Projects */
+
+.project-image-container {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.project-image-container .project-image {
+  transform: scale(1.0);
+  transition: all 0.5s;
+}
+
+.project-image-container:hover .project-image {
+  transform: scale(1.2);
+}
+
+.project-des h3 {
+  text-align: center;
+}
+
+.project img {
+  border-radius: 15px;
+  aspect-ratio: 3 / 2;
+}
+
+.project-features {
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-features .wrap-content {
+  display: flex;
+  align-items: center;
+  border: 1px solid #737373;
+  background-color: var(--background-secondary-color);
+  border-radius: 10px;
+}
+
+.project-des p {
+  text-align: center;
+  margin-top: 30px;
+  
+}
+
+.des p {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #737373;
+}
+
+.feature-symbol {
+  font-size: 1.7rem;
+  border-right: 2px solid #737373;
+}
+
+.project-des .feature-symbol {
+  color: var(--primary-color);
+  transition: all 0.5s;
+}
+
+.project-des:hover .feature-symbol {
+  color: var(--secondary-color);
+}
+
+/* Testimonials */
+
+#testimonial {
+  border-radius: 0px;
+}
+
+.testimonial-card {
+  border-radius: 20px;
+}
+
+ .testimonial-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ .testimonial-card-body .profile-img {
+  width: 40%;
+  border-radius: 50%;
+  border: 5px solid var(--secondary-color);
+}
+
+ .testimonial-card-body h4 {
+  margin-top: 20px;
+}
+
+ .testimonial-card-body h6 {
+  font-style: italic;
+  color: #737373;
+}
+
+ .testimonial-card-body p {
+  margin-top: 5px;
+  text-align: center;
+}
+
+ .testimonial-card-body i {
+  font-size: 2rem;
+  color: #737373;
+}
+
+ .testimonial-card-body .rating-img {
+  width: 30%;
+  margin: 10px;
+}
+
+#trusted-brands {
+  background-color: var(--primary-color);
+}
+
+#trusted-brands h2 {
+  color: white;
+}
+
+#trusted-brands .card {
+  width: 80%;
+  flex-wrap: wrap;
+  border-radius: 20px;
+}
+
+#trusted-brands img {
+  width: 150px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.wrap-logo {
+  display: flex;
+  align-items: center;
+}
+
+/* House plans */
+
+.product {
+  width: 100%;
+  border-radius: 15px;
+}
+
+#image-1-1 {
+  background-image: url("img/shop/image-1-1.jpeg");
+}
+
+#image-1-2 {
+  background-image: url("img/shop/image-1-2.jpg");
+}
+
+#image-1-3 {
+  background-image: url("img/shop/image-1-3.jpg");
+}
+
+#image-2-1 {
+  background-image: url("img/shop/image-2-1.jpeg");
+}
+
+.product-image {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+}
+
+.product .product-image button {
+  display: none;
+  transition: all 0.5s;
+}
+
+.product:hover .product-image button {
+  display: flex;
+  transition: all 0.5s;
+}
+
+.product-image button {
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: 3px solid var(--primary-color);
+  color: var(--primary-color);
+  border-radius: 15px;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.product-image button:hover{
+  background-color: var(--secondary-color);
+  border: 3px solid var(--secondary-color);
+}
+
+.product-btn {
+  border-radius: 15px;
+  font-weight: 600;
+  color: var(--primary-color);
+  border: none;
+  font-size: 1.1rem;
+  transition: all 0.5s;
+}
+
+.product-btn:hover {
+  background-color: var(--primary-color);
+}
+
+/* Custom design */
+
+#custom-design {
+  background-color: var(--background-secondary-color);
+  overflow: hidden;
+}
+
+#phone {
+  color: var(--primary-color);
+}
+
+.custom-img {
+  transition: all 0.5s;
+}
+
+.custom-img:hover {
+  transform: scale(1.2);
+  transition: all 0.5s;
+}
+
+.custom-design-btn {
+  background-color: var(--primary-color);
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 1rem;
+  border: 2px solid var(--primary-color);
+  transition: all 0.5s;
+}
+
+.custom-design-btn:hover {
+  background-color: var(--background-secondary-color);
+  color: var(--primary-color);
+}
+
+/* Staff section */
+
+#staff {
+  width: 100%;
+}
+
+.staff-card {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.staff-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 15px;
+}
+
+.staff-card i {
+  margin-top: -25px;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  padding: 0.5rem;
+  background-color: var(--background-secondary-color);
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  z-index: 1;
+  transition: all 0.5s;
+}
+
+.staff-card:hover i {
+  color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+  transition: all 0.5s;
+}
+
+.staff-card h5 {
+  font-weight: 500;
+  transition: all 0.5s;
+}
+
+.staff-card p {
+  color: #737373;
+  font-weight: 500;
+  margin: 0;
+  font-size: 0.9rem;
+  transition: all 0.5s;
+}
+
+.staff-card:hover h5, .staff-card:hover p {
+  font-weight: 600 ;
+  transition: all 0.5s;
+}
+
+.staff-card img {
+  transition: all 0.5s;
+}
+
+.staff-card:hover img {
+  transform: scale(1.2);
+  transition: all 0.5s;
+}
+
+.staff-btn {
+  border-radius: 15px;
+  font-weight: 600;
+  color: var(--primary-color);
+  border: none;
+  font-size: 1.1rem;
+  transition: all 0.5s;
+}
+
+.staff-btn:hover {
+  background-color: var(--primary-color);
+}
+
+/* Blog section */
+
+.blog-card {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.blog-link .blog-img  {
+  transition: all 0.5s;
+}
+
+.blog-link:hover .blog-img  {
+  transform: scale(1.2);
+  transition: all 0.5s;
+}
+
+.blog-card img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  border-radius: 20px;
+  transition: all 0.5s;
+}
+
+.blog-card h5 {
+  text-transform: capitalize;
+}
+
+.blog-card p {
+  font-size: 0.9rem;
+  color: #737373;
+}
+
+.blog-card .read-more {
+  font-size: 0.9rem;
+  color: var(--primary-color);
+}
+
+.blog-card span {
+  font-size: 0.9rem;
+  color: #737373;
+}
+
+.blog-btn {
+  border-radius: 15px;
+  font-weight: 600;
+  color: var(--primary-color);
+  border: none;
+  font-size: 1.1rem;
+  transition: all 0.5s;
+}
+
+.blog-btn:hover {
+  background-color: var(--primary-color);
+}
+
+/* Footer section */
+
+footer {
+  width: 100%;
+  background-color: #313131;
+}
+
+.footer-contacts {
+  color: white;
+}
+
+.map img {
+  border-radius: 20px;
+}
+
+#facebook {
+  background-image: url("img/footer/facebook_new.PNG");
+}
+
+#instagram {
+  background-image: url("img/footer/instagram_icon.PNG");
+}
+
+#linkedin {
+  background-image: url("img/footer/linkedin_icon.PNG");
+}
+
+#youtube {
+  background-image: url("img/footer/youtube_icon.PNG");
+}
+
+.social-media {
+  color: white;
+}
+
+.social-icons div {
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+}
+
+.mobile-social {
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+}
+
+.quick-links {
+  color: white;
+}
+
+.quick-links a{
+  color: white;
+  text-decoration: none;
+}
+
+.rights span {
+  color: white;
+}
+
+/* Screen sizes lessa than 576 px */
+
+@media only screen and (max-width: 575px) {
+
+  /* Hero content */
+
+  h1 {
+    font-size: 2.3rem;
+  }
+
+  .hero-image {
+    width: 90%;
+  }
+
+  .hero-content {
+    height: 100vh;
+    justify-content: space-around;
+  }
+
+  /* Banner section */
+
+  .banner-img-container {
+    height: 350px;
+  }
+
+  /* Footer section */
+
+  .footer-contacts {
+    text-align: center;
+  }
+
+  .social-media {
+    text-align: center;
+  }
+
+  .quick-links {
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+}
+</style>
+<body>
+    <!--header-section-->
+    <header class="header-section">
+        <div class="container">
+
+            <div class="row d-flex flex-row py-3">
+                <div class="col-2">
+                    <a href="/"><img src="img/header/aanda_design_logo.png" alt="dd design logo"  height="50px"></a>
+                </div>
+
+                <!-- Menu section for desktops -->
+
+                <div class="col-10 justify-content-end align-items-center d-none d-lg-flex">  
+                    <nav id="desktop-nav" class="d-flex align-items-center">
+                        <ul class="d-flex m-0">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="pages/shop.html">Shop</a></li>
+                            <li><a class="active" href="pages/blog.html">Blog</a></li>
+                            <li><a href="pages/about.html">About</a></li>
+                        </ul>
+                    </nav>
+                    <div class="call-to-action">
+                        <a class="call-to-action-btn btn btn-outline-primary px-3 py-1" href="pages/contact.html">Contact Us</a>
+                    </div> 
+                </div>
+
+                <!-- Hamburg for mobile menu -->
+
+                <div class="col-8 d-block d-lg-none"></div>
+
+                <div class="hamburg col-2 d-flex d-lg-none align-items-center justify-content-end">
+                    <i class="fa-solid fa-bars fs-3"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu section for mobiles-->
+
+        <div class="menu-page pb-4 d-flex flex-column justify-content-center align-items-center border">
+            <nav class="">
+                <ul class="d-flex flex-column justify-content-center align-items-center p-0">
+                    <li><a class="" href="/">Home</a></li>
+                    <li><a class="" href="pages/shop.html">Shop</a></li>
+                    <li><a class="active" href="pages/blog.html">Blog</a></li>
+                    <li><a class="" href="pages/about.html">About</a></li>
+                </ul>
+            </nav>
+            <div class="call-to-action">
+                <a class="call-to-action-btn btn btn-outline-primary px-3 py-1" href="pages/contact.html">Contact Us</a>
+            </div> 
+        </div>
+  
+    </header><!--header-section-->
+
+    <section id="blog-post" class="w-100">
+        <div class="container">
+            
+            <div class="row d-flex flex-column flex-lg-row">
+
+                <!-- Main post -->
+
+                <div class="main-post col-12 col-lg-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="mt-3">10 benifits of making 3D designs before construction</h2>
+                            <img class="img-fluid mt-3" src="img/blog/10_benifits_of_making_3d_designs.jpeg" alt="">
+
+                            <!--Main content-->
+
+                            <div class="blog-content mt-4"></div>
+
+
+                            <!-- Share icons -->
+
+                            <div class="share-icons">
+                                <span class="me-3">Share</span>
+                                <button class="me-3"><i class="fa-brands fa-facebook"></i></button>
+                                <button class="me-3"><i class="fa-brands fa-facebook-messenger"></i></button>
+                                <button class="me-3"><i class="fa-brands fa-twitter"></i></button>
+                                <button class="me-3"><i class="fa-brands fa-linkedin"></i></button>
+                            </div>
+                            <hr>
+
+                            <!-- Comment section -->
+
+                            <div class="blog-comments mt-3">
+
+                                <textarea class="form-control" name="comment" id="comment" cols="30" rows="5" placeholder="Write your idea here.."></textarea>
+                                <button class="btn btn-submit my-3">Submit</button>
+
+                                <!-- Previous comments -->
+
+                                <div class="comments">
+                                    <div class="row mt-3">
+
+                                        <!-- User comment-->
+
+                                        <div class="col-2 col-md-1">
+                                            <img id="user-image-2" src="img/blog/random-user-2.jpg" alt="">
+                                        </div>
+
+                                        <div class="col-10 col-md-11 ps-lg-4 ps-xl-0 ps-md-0">
+                                            <div class="description">
+                                                <h6>Thilini Perera</h6>
+                                                <span>4 months ago</span>
+                                                <p>This blog opened my eyes to the incredible advantages of 3D designs! It's amazing how visualizing our future home in 3D helped us make informed decisions. Thank you!</p>
+                                                <div class="reaction-bar d-flex justify-content-between">
+                                                    <div class="likeup">
+                                                        <i class="fa-regular fa-thumbs-up me-2"></i>
+                                                        <span>8</span>
+                                                    </div>
+                                                    <div class="likedown">
+                                                        <i class="fa-regular fa-thumbs-down me-2"></i>
+                                                        <span>1</span>
+                                                    </div>
+                                                    
+                                                    <span>Share</span>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+
+                                    <!-- User comment -->
+
+                                    <div class="row mt-3">
+                                        <div class="col-2 col-md-1">
+                                            <img id="user-image-1" src="img/blog/random-user-1.jpg" alt="">
+                                        </div>
+                                        <div class="col-10 col-md-11 ps-lg-4 ps-xl-0">
+
+                                            <div class="description">
+                                                <h6>Kasun Subasinghe</h6>
+                                                <span>6 months ago</span>
+                                                <p>Such a helpful read! The benefits of 3D designs are undeniable, and after reading this blog, I'm convinced it's the way to go for our dream home. Great insights!</p>
+                                                
+                                                <div class="reaction-bar d-flex justify-content-between">
+                                                    <div class="likeup">
+                                                        <i class="fa-regular fa-thumbs-up me-2"></i>
+                                                        <span>6</span>
+                                                    </div>
+                                                    <div class="likedown">
+                                                        <i class="fa-regular fa-thumbs-down me-2"></i>
+                                                        <span>1</span>
+                                                    </div>
+                                                    
+                                                    <span>Share</span>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Popular posts-->
+
+                <div class="col-12 col-lg-4 popular-posts mt-5 mt-lg-0">
+                    <h5>Popular Posts</h5>
+
+                    <!-- Post pane 1-->
+
+                    <a href="#">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="col-4">
+                                    <img class="img-fluid" src="img/blog/13_ideas_to_reduce_the_cost.jpg" alt="">
+                                </div>
+                                <div class="col-8">
+                                    <h6>13 ideas to reduce the cost of house construction</h6>
+                                    <p class="d-flex d-lg-none">
+                                        The article presents 13 practical ideas to lower house construction costs. It suggests using energy-efficient materials, optimizing floor plans, and..
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Post pane 2-->
+    
+                    <a href="#">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="col-4">
+                                    <img class="img-fluid" src="img/blog/15_new_design_ideas.png" alt="">
+                                </div>
+                                <div class="col-8">
+                                    <h6>15 new design ideas for 2 story houses</h6>
+                                    <p class="d-flex d-lg-none">
+                                        The article showcases 15 fresh design concepts for two-story houses. It explores modern architectural trends, including open-plan layouts, sustainable..
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Post pane 3-->
+    
+                    <a href="#">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="col-4">
+                                    <img class="img-fluid" src="img/blog/eco-friendly-living.jpg" alt="">
+                                </div>
+                                <div class="col-8">
+                                    <h6>Sustainable Living: Eco-Friendly Building Materials</h6>
+                                    <p class="d-flex d-lg-none">
+                                        The article highlights the importance of sustainable living and introduces eco-friendly building materials. It discusses various options like reclaimed..
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Post pane 4-->
+    
+                    <a href="#">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="col-4">
+                                    <img class="img-fluid" src="img/blog/efficient-space-planning.jpg" alt="">
+                                </div>
+                                <div class="col-8">
+                                    <h6>Efficient Space Planning: Maximize Home Functionality</h6>
+                                    <p class="d-flex d-lg-none">
+                                        The article emphasizes the significance of efficient space planning in homes and offers tips to maximize functionality. It discusses optimizi..
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Post pane 5-->
+    
+                    <a href="#">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="col-4">
+                                    <img class="img-fluid" src="img/blog/power-of-classic-design.jpg" alt="">
+                                </div>
+                                <div class="col-8">
+                                    <h6>Timeless s Interiors: Power of Classic Design</h6>
+                                    <p class="d-flex d-lg-none">
+                                        The article celebrates timeless interiors and the enduring charm of classic design. It explores the elegance of traditional elements, such as..
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer class="mt-3">
+
+        <!-- Left corner column-->
+
+        <div class="container mt-5">
+            <div class="row">
+
+                <!-- Quick Contacts-->
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="footer-contacts mb-3">
+                        <h3>Quick Contacts</h3>
+                        <h4 class="mt-3">Phone</h4>
+                        <span>(+94) 112 122 324<br></span>
+                        <span>(+94) 777 658 742 (Whatsapp)</span>
+                        <h4 class="mt-3">Address</h4>
+                        <span>No. 21,<br>Galle Road,<br>Colombo 03.</span>
+                        <h4 class="mt-3">E-mail</h4>
+                        <span>contact@aandadesigns.lk</span>
+                    </div>
+                    
+                </div>
+
+                <!-- Google map of the address-->
+
+                <div class="col-4 d-none d-lg-block">
+                    <div class="map mt-2">
+                        <img class="img-fluid" src="img/footer/location_embed_map.PNG" alt="location map">
+                    </div>
+                    
+                </div>
+
+                <!-- Right column -->
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="right-col ms-xl-5 ps-xl-5">
+
+                        <!-- Social media section -->
+
+                        <div class="social-media">
+                            <div class="row">
+                                <h3>Social Media</h3>
+                            </div>
+
+                            <!-- Social icons for all screens other than extra small-->
+
+                            <div class="row d-flex d-sm-flex mt-3">
+                                <div class="social-icons d-flex">
+                                    <a class="me-3" href="#"><div id="facebook"></div></a>
+                                    <a class="me-3" href="#"><div id="instagram"></div></a>
+                                    <a class="me-3" href="#"><div id="linkedin"></div></a>
+                                    <a class="me-3" href="#"><div id="youtube"></div></a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Quick links -->
+
+                        <div class="quick-links mt-4">
+                            <div class="row">  
+                                <h3>Quick Links</h3>
+                            </div>
+
+                            <div class="row mt-1">
+                                <a class="mt-1" href="pages/policy/privacy.policy/privacy.policy.html" target=”_blank”>Privacy Policy</a>
+                                <a class="mt-1" href="pages/policy/disclaimer/disclaimer.html" target=”_blank”>Disclaimer</a>
+                                <a class="mt-1" href="pages/policy/terms/terms.conditions.html" target=”_blank”>Terms and Conditions</a>
+                                <a class="mt-1" href="pages/about.html" target=”_blank”>About Us</a>
+                                <a class="mt-1" href="pages/contact.html" target=”_blank”>Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Google maps location of the address for smaller screens-->
+
+            <div class="row md-map d-lg-none mt-4">
+                <div class="map d-flex justify-content-center mt-2">
+                    <img class="img-fluid" src="img/footer/location_embed_map.PNG" alt="location map">
+                </div>
+            </div>
+
+            <!-- Copyright notice -->
+
+            <div class="row">
+                <div class="rights d-flex justify-content-center my-3">
+                    <span>Ⓒ A&A Designs Pvt Ltd. All Rights Reserved</span>
+                </div>   
+            </div>
+        </div>
+    </footer> <!-- Footer-Section -->
+
+        
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/569015700f.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+    <script src="js/blog.posts.scripts/blog.post.1.script.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
